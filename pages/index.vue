@@ -32,14 +32,23 @@
           v-for="card in cards"
           class="w-1/2 block px-3 py-3 shadow-md hover:shadow-xl duration-300"
         >
-          <div class="block">
+          <div class="block ">
             <div class="text-gray-300">
             <nuxt-link to="/"
-              ><img
+              >
+            <div class="card-image-box hover:animate-pulse duration-700">
+              <div class="flex justify-center">
+                <div :style="`height: 250px; width:100%; background-image: url(${card.image}); background-repeat: no-repeat`" class="bg-contain bg-center">
+
+                </div>
+              </div>
+              <!-- <img
                 class="rounded-lg shadow-lg hover:rounded-2xl hover:animate-pulse duration-1000 hover:drop-shadow"
                 :src="card.image"
                 alt=""
-            /></nuxt-link>
+            /> -->
+            </div>
+          </nuxt-link>
           </div>
           <div
               class="text-slate-700 rounded-lg px-3 drop-shadow-lg hover: duration-1000"
@@ -159,7 +168,7 @@ export default {
         {
           title: "Visko E-Serve Pvt Ltd",
           image:
-            "https://images.unsplash.com/photo-1621570168205-c93ccd501004?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "assets/image/comp-1.png",
           link: "https://viskoeserve.com",
           linktitle: "www.google.com",
           moreinfomation:
@@ -169,7 +178,7 @@ export default {
         {
           title: "Visko HR Pvt Ltd",
           image:
-            "https://images.unsplash.com/photo-1621570274061-6b0c42c7bd13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "assets/image/comp-2.png",
           link: "https://remarkhr.com",
           linktitle: "www.google.com",
           moreinfomation:
@@ -179,7 +188,7 @@ export default {
         {
           title: "Visko Foods Pvt Ltd",
           image:
-            "https://images.unsplash.com/photo-1621570168297-bdcdd4457664?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "assets/image/comp-3.png",
           link: "https://viskofoods.com",
           linktitle: "www.google.com",
           moreinfomation:
@@ -188,7 +197,7 @@ export default {
         {
           title: "Visko Real Estate Pvt Ltd",
           image:
-            "https://images.unsplash.com/photo-1621570168077-befe8b7eab56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "assets/image/comp-4.png",
           link: "https://viskorealestate.com",
           linktitle: "www.google.com",
           moreinfomation:
@@ -199,3 +208,17 @@ export default {
   },
 };
 </script>
+
+<style>
+
+.card-image-box {
+  background-color: white;
+  width: 100%;
+  height: 300px !important;
+}
+
+.card-image-box:hover {
+  background-size: contain;
+}
+
+</style>

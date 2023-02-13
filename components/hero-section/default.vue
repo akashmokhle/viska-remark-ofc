@@ -14,7 +14,7 @@
                 <button></button>
             </div>
             <div class="w-1/2 p-10"> -->
-                <img class="w-full drop-shadow-2xl duration-1000 " :src="mainimage" alt="">
+                <img class="hero-image w-full drop-shadow-2xl duration-1000" :src="mainimage" alt="">
             <!-- </div> -->
             
         </div>
@@ -50,5 +50,6 @@
 <style>
 .hero img{
     background-size: cover;
+    display: none;
 }
 </style>
